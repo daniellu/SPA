@@ -12,7 +12,10 @@ namespace CSPA
         {
             bundles.Add(new ScriptBundle("~/bundles/app").Include(                
                 "~/Scripts/app/common.js",
-                "~/Scripts/app/app.js"));
+                "~/Scripts/app/Module.js", 
+                "~/Scripts/app/RiderController.js",
+                "~/Scripts/app/ActivityController.js",
+                "~/Scripts/app/Service.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
