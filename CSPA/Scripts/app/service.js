@@ -1,8 +1,9 @@
 ﻿app.service("APIService", function ($http) {
-    this.getSubs = function () {
-        var url = 'api/Subscriber';
-        return $http.get(url).then(function (response) {
-            return response.data;
+
+    this.getRecentActivities = function () {
+        return $http({
+            method: 'get',            
+            url: 'api/ActivityAPI'
         });
     }
     this.saveSubscriber = function (sub) {

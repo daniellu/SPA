@@ -1,2 +1,14 @@
-﻿
-I am a activity partial view
+﻿<table class="table table-responsive">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr data-ng-repeat="Activity in Activities">
+            <td>{{Activity.id}}</td>
+            <td>{{Activity.name}}</td>            
+        </tr>
+    </tbody> 
+</table>
