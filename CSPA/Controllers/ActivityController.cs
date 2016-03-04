@@ -13,5 +13,10 @@ namespace CSPA.Controllers
         {
             return PartialView();
         }
+
+        public ActionResult Detail()
+        {
+            return PartialView();
+        }
     }
 }

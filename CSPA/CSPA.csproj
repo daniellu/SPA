@@ -236,6 +236,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\app\ActivityDetailController.js" />
     <Content Include="Scripts\app\ActivityController.js" />
     <Content Include="Scripts\app\RiderController.js" />
     <Content Include="Scripts\app\Service.js" />
@@ -315,6 +316,7 @@
     <Content Include="Views\App\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Rider\Index.cshtml" />
+    <Content Include="Views\Activity\Detail.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

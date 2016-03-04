@@ -15,6 +15,7 @@ namespace CSPA
                 "~/Scripts/app/Module.js", 
                 "~/Scripts/app/RiderController.js",
                 "~/Scripts/app/ActivityController.js",
+                "~/Scripts/app/ActivityDetailController.js",
                 "~/Scripts/app/Service.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're

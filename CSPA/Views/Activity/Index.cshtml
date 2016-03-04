@@ -3,12 +3,14 @@
         <tr>
             <th>Id</th>
             <th>Name</th>
+            <th>Action(s)</th>
         </tr>
     </thead>
     <tbody>
         <tr data-ng-repeat="Activity in Activities">
             <td>{{Activity.id}}</td>
             <td>{{Activity.name}}</td>            
+            <td><a ng-href="/App#/activityDetail/{{Activity.id}}">Detail</a></td>
         </tr>
     </tbody> 
 </table>

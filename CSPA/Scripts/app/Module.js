@@ -17,6 +17,11 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider) {
                             templateUrl: 'Activity/Index',
                             controller: 'ActivityController'
                         });
+    $routeProvider.when('/activityDetail/:activityId',
+                        {
+                            templateUrl: 'Activity/Detail',
+                            controller: 'ActivityDetailController'
+                        });
     $routeProvider.otherwise(
                         {
                             redirectTo: '/'
