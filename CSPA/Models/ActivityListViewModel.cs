@@ -7,7 +7,11 @@ namespace CSPA.Models
 {
     public class ActivityListViewModel
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string Name { get; set; }
+        public string ActivityType { get; set; }
+        public DateTime DateTime { get; set; }
+        public int ElapseTimeSeconds { get; set; }
+        public float Distance { get; set; }
     }
 }

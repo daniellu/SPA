@@ -6,7 +6,13 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 
+using Strava.Api;
+using Strava.Activities;
+using Strava.Clients;
+using Strava.Authentication;
+
 using CSPA.Models;
+
 
 namespace CSPA.Controllers.API
 {
@@ -15,20 +21,23 @@ namespace CSPA.Controllers.API
         // GET api/<controller>
         public IEnumerable<ActivityListViewModel> Get()
         {
-            return new List<ActivityListViewModel> { 
-                new ActivityListViewModel{
-                    Id = 1,
-                    Name = "Activity 1"
-                },
-                new ActivityListViewModel{
-                    Id = 2,
-                    Name = "Activity 2"
-                },
-                new ActivityListViewModel{
-                    Id = 3,
-                    Name = "Activity 3"
-                }
-            };
+            var token = System.Configuration.ConfigurationManager.AppSettings["StravaToken"];
+            StaticAuthentication auth = new StaticAuthentication(token);
+            StravaClient client = new StravaClient(auth);
+            var activities = client.Activities.GetActivitiesAfter(DateTime.Now.AddDays(-7));
+
+            var viewModels = from activity in activities
+                             select new ActivityListViewModel
+                             {
+                                 Id = activity.Id,
+                                 Name = activity.Name,
+                                 ActivityType = activity.Type.ToString(),
+                                 DateTime = activity.DateTimeStartLocal,
+                                 ElapseTimeSeconds = activity.ElapsedTime,
+                                 Distance = (float)(Math.Round(activity.Distance / 1000, 3))
+                             };
+
+            return viewModels.OrderByDescending(x => x.DateTime);
         }
 
 

@@ -1,15 +1,23 @@
 ﻿<table class="table table-responsive">
     <thead>
-        <tr>
-            <th>Id</th>
+        <tr>            
             <th>Name</th>
+            <th>Activity Type</th>
+            <th>Activity Date</th>
+            <th>Elapse Time(seconds)</th>
+            <th>Distance(KMs)</th>
             <th>Action(s)</th>
         </tr>
     </thead>
     <tbody>
-        <tr data-ng-repeat="Activity in Activities">
-            <td>{{Activity.id}}</td>
+        <tr data-ng-repeat="Activity in Activities">            
             <td>{{Activity.name}}</td>            
+            <td>{{Activity.activityType}}</td>
+            <td>
+                <time am-time-ago="Activity.dateTime" title="{{ Activity.dateTime | amDateFormat: 'dddd, MMMM Do YYYY, h:mm a' }}"></time>
+            </td>
+            <td>{{Activity.elapseTimeSeconds}}</td>
+            <td>{{Activity.distance}}</td>
             <td><a ng-href="/App#/activityDetail/{{Activity.id}}">Detail</a></td>
         </tr>
     </tbody> 
