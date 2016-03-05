@@ -60,9 +60,6 @@ app.directive('fullScreenToggle', function ($timeout) {
                 google.maps.event.trigger(scope.map, 'resize');
             };
             e.on('click', fullScreenClick);
-            $timeout(function () {
-                fullScreenClick();
-            }, 1000);
         }
     }
 });
