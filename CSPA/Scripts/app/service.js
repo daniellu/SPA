@@ -6,6 +6,18 @@
             url: 'api/ActivityAPI'
         });
     }
+    this.getActivityDetail = function (activityId) {
+        return $http({
+            method: 'get',
+            url: 'api/ActivityAPI/Get/' + activityId
+        });
+    }
+    this.getActivityTrack = function (activityId) {
+        return $http({
+            method: 'get',
+            url: 'api/ActivityAPI/GetTrackData/' + activityId
+        });
+    }
     this.getRiderProfile = function (userId) {
         return $http({
             method: 'get',

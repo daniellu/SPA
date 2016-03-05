@@ -1,7 +1,7 @@
-﻿var app = angular.module("ApplicationModule", ["ngRoute", 'angularMoment']);
+﻿var app = angular.module("ApplicationModule", ["ngRoute", 'angularMoment', 'ngMap']);
 
 app.factory("ShareData", function () {
-    return { value: 0 }
+    return { DetailMapTrack : null }
 });
 
 //Showing Routing  
