@@ -4,20 +4,47 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Threading;
+
+using Strava.Api;
+using Strava.Activities;
+using Strava.Clients;
+using Strava.Authentication;
+using Strava.Athletes;
 
 using CSPA.Models;
+using System.Threading.Tasks;
+
 
 namespace CSPA.Controllers.API
 {
     public class RiderAPIController : ApiController
     {
-        // GET api/<controller>/5
-        public RiderProfileViewModel Get(int id)
+        private StravaClient _client = null;
+
+        public RiderAPIController()
         {
+            var token = System.Configuration.ConfigurationManager.AppSettings["StravaToken"];
+            StaticAuthentication auth = new StaticAuthentication(token);
+            _client = new StravaClient(auth);
+        }
+        // GET api/<controller>/5
+        public async Task<RiderProfileViewModel> Get()
+        {
+            var athleteClient = _client.Athletes;
+            var activityClient = _client.Activities;
+            var currentAthlete = await athleteClient.GetAthleteAsync();
+            var totalActivityCount = await activityClient.GetTotalActivityCountAsync();            
+            
             var viewModel = new RiderProfileViewModel();
-            viewModel.Id = id;
-            viewModel.UserName = "username";
-            viewModel.FullName = "fulname";
+            viewModel.Id = currentAthlete.Id;
+            viewModel.FirstName = currentAthlete.FirstName;
+            viewModel.LastName = currentAthlete.LastName;
+            viewModel.Country = currentAthlete.Country;
+            viewModel.State = currentAthlete.State;
+            viewModel.ProfileSmallImage = currentAthlete.ProfileMedium;
+            viewModel.ProfileLargeImage = currentAthlete.Profile;
+            viewModel.TotalActivitiesCount = totalActivityCount;            
 
             return viewModel;
         }

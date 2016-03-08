@@ -18,10 +18,10 @@
             url: 'api/ActivityAPI/GetTrackData/' + activityId
         });
     }
-    this.getRiderProfile = function (userId) {
+    this.getRiderProfile = function () {
         return $http({
             method: 'get',
-            url: 'api/RiderAPI/' + userId
+            url: 'api/RiderAPI/Get'
         });
     }
     this.saveSubscriber = function (sub) {
