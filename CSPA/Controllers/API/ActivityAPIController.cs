@@ -21,11 +21,9 @@ namespace CSPA.Controllers.API
     {
         private StravaClient _client = null;
 
-        public ActivityAPIController()
+        public ActivityAPIController(StravaClient client)
         {
-            var token = System.Configuration.ConfigurationManager.AppSettings["StravaToken"];
-            StaticAuthentication auth = new StaticAuthentication(token);
-            _client = new StravaClient(auth);
+            _client = client;
         }
 
         // GET api/<controller>

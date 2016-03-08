@@ -22,11 +22,9 @@ namespace CSPA.Controllers.API
     {
         private StravaClient _client = null;
 
-        public RiderAPIController()
+        public RiderAPIController(StravaClient client)
         {
-            var token = System.Configuration.ConfigurationManager.AppSettings["StravaToken"];
-            StaticAuthentication auth = new StaticAuthentication(token);
-            _client = new StravaClient(auth);
+            _client = client;
         }
         // GET api/<controller>/5
         public async Task<RiderProfileViewModel> Get()
