@@ -28,3 +28,5 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider) {
                         });
         
 }]);
+
+$.material.init();

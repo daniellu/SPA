@@ -282,6 +282,15 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="Scripts\md\css\bootstrap-material-design.css" />
+    <Content Include="Scripts\md\css\bootstrap-material-design.min.css" />
+    <Content Include="Scripts\md\css\ripples.css" />
+    <Content Include="Scripts\md\css\ripples.min.css" />
+    <Content Include="Scripts\md\index.css" />
+    <Content Include="Scripts\md\js\material.js" />
+    <Content Include="Scripts\md\js\material.min.js" />
+    <Content Include="Scripts\md\js\ripples.js" />
+    <Content Include="Scripts\md\js\ripples.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\ng-map.min.js" />
     <Content Include="Scripts\respond.js" />
@@ -339,6 +348,12 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Rider\Index.cshtml" />
     <Content Include="Views\Activity\Detail.cshtml" />
+    <Content Include="Scripts\md\css\bootstrap-material-design.css.map" />
+    <Content Include="Scripts\md\css\bootstrap-material-design.min.css.map" />
+    <Content Include="Scripts\md\css\ripples.css.map" />
+    <Content Include="Scripts\md\css\ripples.min.css.map" />
+    <Content Include="Scripts\md\js\material.min.js.map" />
+    <Content Include="Scripts\md\js\ripples.min.js.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

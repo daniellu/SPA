@@ -1,32 +1,48 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @Styles.Render("~/Content/css")
+    <title>@ViewBag.Title</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Material Design fonts -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+    <!-- Bootstrap Material Design -->
+    <link href="~/Scripts/md/css/bootstrap-material-design.min.css" rel="stylesheet" />
+    <link href="~/Scripts/md/css/ripples.min.css" rel="stylesheet" />
+    <!-- Page style -->
+    
+    <!-- jQuery -->
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+    <div class="navbar navbar-default navbar-material-light-blue-300">
+        <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-material-light-blue-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <a class="navbar-brand" href="@Url.Action("Index", "Home")">Angular Demo System</a>
             </div>
-            <div class="navbar-collapse collapse">
+            <div class="navbar-collapse collapse navbar-material-light-blue-collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+                    <li><a href="/Home">Home<div class="ripple-container"></div></a></li>
                     <li>@Html.ActionLink("API", "Index", "Help", new { area = "HelpPage" }, null)</li>
                     <li><a href="/App#/listActivity"> Activities </a></li>
                     <li><a href="/App#/rider"> Rider </a></li>
                 </ul>
-                @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
@@ -39,9 +55,12 @@
     </div>
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
-    
-    
-    @Scripts.Render("~/bundles/bootstrap")
+    <!-- Twitter Bootstrap -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- Material Design for Bootstrap -->
+    <script src="~/Scripts/md/js/material.js"></script>
+    <script src="~/Scripts/md/js/ripples.js"></script>
+       
   
     @RenderSection("Scripts", required: false)
 </body>
