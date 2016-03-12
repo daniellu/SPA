@@ -1,0 +1,42 @@
+﻿
+
+<div class="well bs-component">
+    <form class="form-horizontal">
+        <fieldset>
+            <legend>Earn Date Query</legend>
+            <div class="form-group label-floating is-empty">
+                <div class="input-group">
+                    <span class="input-group-addon">Codes</span>
+                    <label class="control-label" for="addon3a">Input the stock codes</label>
+                    <input type="text" id="addon3a" class="form-control" ng-model="queryString">
+                    <p class="help-block">Input stock codes, use <code>,</code> as delimiter.</p>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-fab btn-fab-mini" ng-click="queryEarnDate(queryString)">
+                            <i class="material-icons">send</i>
+                        </button>
+                    </span>
+                </div>
+                <span class="material-input"></span>
+            </div>
+                    
+        </fieldset>
+    </form>
+    <table class="table table-responsive" ng-show="earnDateData != null">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Earn Release Date</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-ng-repeat="data in earnDateData">
+                <td>{{data.code}}</td>
+                <td>{{data.earnReleaseDate}}</td>
+                <td>{{data.comments}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+    

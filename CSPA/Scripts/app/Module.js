@@ -7,6 +7,11 @@ app.factory("ShareData", function () {
 //Showing Routing  
 app.config(['$routeProvider', '$locationProvider', function ($routeProvider) {
     debugger;
+    $routeProvider.when('/',
+                        {
+                            templateUrl: 'Home/DashBoard',
+                            //controller: 'RiderController'
+                        });
     $routeProvider.when('/rider',
                         {
                             templateUrl: 'Rider/Index',
@@ -21,6 +26,11 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider) {
                         {
                             templateUrl: 'Activity/Detail',
                             controller: 'ActivityDetailController'
+                        });
+    $routeProvider.when('/earnDate',
+                        {
+                            templateUrl: 'EarnDate/Index',
+                            controller: 'EarnDateController'
                         });
     $routeProvider.otherwise(
                         {

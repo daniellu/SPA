@@ -222,8 +222,10 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ActivityController.cs" />
     <Compile Include="Controllers\API\ActivityAPIController.cs" />
+    <Compile Include="Controllers\API\EarnDateAPIController.cs" />
     <Compile Include="Controllers\API\RiderAPIController.cs" />
     <Compile Include="Controllers\AppController.cs" />
+    <Compile Include="Controllers\EarnDateController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MeController.cs" />
@@ -239,6 +241,7 @@
     <Compile Include="Models\ActivityListViewModel.cs" />
     <Compile Include="Models\ActivityTrackDataViewModel.cs" />
     <Compile Include="Models\Coordinate.cs" />
+    <Compile Include="Models\EarnDateDecideResult.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MeViewModels.cs" />
@@ -259,6 +262,7 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\app\ActivityDetailController.js" />
     <Content Include="Scripts\app\ActivityController.js" />
+    <Content Include="Scripts\app\EarnDateController.js" />
     <Content Include="Scripts\app\RiderController.js" />
     <Content Include="Scripts\app\Service.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -354,6 +358,8 @@
     <Content Include="Scripts\md\css\ripples.min.css.map" />
     <Content Include="Scripts\md\js\material.min.js.map" />
     <Content Include="Scripts\md\js\ripples.min.js.map" />
+    <Content Include="Views\EarnDate\Index.cshtml" />
+    <Content Include="Views\Home\DashBoard.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

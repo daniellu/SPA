@@ -24,6 +24,12 @@
             url: 'api/RiderAPI/Get'
         });
     }
+    this.queryEarnDate = function (queryString) {
+        return $http({
+            method: 'get',
+            url: 'api/EarnDateAPI/Get?stockCodes=' + queryString
+        });
+    }
     this.saveSubscriber = function (sub) {
         return $http({
             method: 'post',
