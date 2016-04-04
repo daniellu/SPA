@@ -225,6 +225,7 @@
     <Compile Include="Controllers\API\EarnDateAPIController.cs" />
     <Compile Include="Controllers\API\RiderAPIController.cs" />
     <Compile Include="Controllers\AppController.cs" />
+    <Compile Include="Controllers\ChartController.cs" />
     <Compile Include="Controllers\EarnDateController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -262,6 +263,7 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\app\ActivityDetailController.js" />
     <Content Include="Scripts\app\ActivityController.js" />
+    <Content Include="Scripts\app\ChartController.js" />
     <Content Include="Scripts\app\EarnDateController.js" />
     <Content Include="Scripts\app\RiderController.js" />
     <Content Include="Scripts\app\Service.js" />
@@ -360,6 +362,7 @@
     <Content Include="Scripts\md\js\ripples.min.js.map" />
     <Content Include="Views\EarnDate\Index.cshtml" />
     <Content Include="Views\Home\DashBoard.cshtml" />
+    <Content Include="Views\Chart\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -32,6 +32,11 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider) {
                             templateUrl: 'EarnDate/Index',
                             controller: 'EarnDateController'
                         });
+    $routeProvider.when('/chart',
+                        {
+                            templateUrl: 'Chart/Index',
+                            controller: 'ChartController'
+                        });
     $routeProvider.otherwise(
                         {
                             redirectTo: '/'

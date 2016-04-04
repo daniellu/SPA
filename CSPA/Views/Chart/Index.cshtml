@@ -1,0 +1,80 @@
+﻿<script src="https://code.highcharts.com/stock/highstock.js"></script>
+<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+
+<div class="container">
+    <div class="items" ng-repeat="item in Items">
+        
+            
+            <div class="col-md-6">
+                <div class="well bs-component">
+                    <form class="form-horizontal">
+                        <fieldset>
+                            <legend>Time Series Data</legend>
+                            <div class="form-group is-empty">
+                                <label class="col-md-2 control-label">Time Series Name</label>
+
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" placeholder="Time Series Name" ng-model="item.TimeSeriesName">
+                                </div>
+                                <span class="material-input"></span>
+                            </div>        
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Chart Type</label>
+
+                                <div class="col-md-10">
+                                    <div class="radio radio-primary">
+                                        <label>
+                                            <input ng-model="item.ChartType" type="radio" name="typeRadios" value="candlestick" checked=""><span class="circle"></span><span class="check"></span>
+                                            Candle Stick
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-primary">
+                                        <label>
+                                            <input ng-model="item.ChartType" type="radio" name="typeRadios" value="line"><span class="circle"></span><span class="check"></span>
+                                            Line
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-primary">
+                                        <label>
+                                            <input ng-model="item.ChartType" type="radio" name="typeRadios" value="column"><span class="circle"></span><span class="check"></span>
+                                            Column
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>                    
+                            <div class="form-group is-empty">
+                                <label for="textArea" class="col-md-2 control-label">Data</label>
+
+                                <div class="col-md-10">
+                                    <textarea class="form-control" rows="3" id="textArea" ng-model="item.Data"></textarea>                                    
+                                </div>
+                                <span class="material-input"></span>
+                            </div>
+                                                        
+                        </fieldset>
+                    </form>                    
+                </div>
+            </div>
+            
+        
+    </div>
+    <div>
+        <div>
+            <button title="add time series" type="button" class="btn btn-warning btn-fab btn-fab-mini" ng-click="addTimeSeries()">
+                <i class="material-icons">add</i>
+                <div class="ripple-container"></div>
+            </button>
+            |
+            <button title="generate chart" type="button" class="btn btn-primary btn-fab btn-fab-mini" ng-click="generateChart()">
+                <i class="material-icons">launch</i>
+                <div class="ripple-container"></div>
+            </button>
+        </div>
+    </div>
+    <br />
+    <div id="graphContainer" class="row div-border" style="height: 800px">
+        
+    </div>
+
+</div>
