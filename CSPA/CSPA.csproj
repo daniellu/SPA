@@ -263,8 +263,6 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\app\ActivityDetailController.js" />
     <Content Include="Scripts\app\ActivityController.js" />
-    <Content Include="Scripts\app\ChartController.js" />
-    <Content Include="Scripts\app\EarnDateController.js" />
     <Content Include="Scripts\app\RiderController.js" />
     <Content Include="Scripts\app\Service.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -360,9 +358,7 @@
     <Content Include="Scripts\md\css\ripples.min.css.map" />
     <Content Include="Scripts\md\js\material.min.js.map" />
     <Content Include="Scripts\md\js\ripples.min.js.map" />
-    <Content Include="Views\EarnDate\Index.cshtml" />
     <Content Include="Views\Home\DashBoard.cshtml" />
-    <Content Include="Views\Chart\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

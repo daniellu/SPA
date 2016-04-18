@@ -27,16 +27,6 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider) {
                             templateUrl: 'Activity/Detail',
                             controller: 'ActivityDetailController'
                         });
-    $routeProvider.when('/earnDate',
-                        {
-                            templateUrl: 'EarnDate/Index',
-                            controller: 'EarnDateController'
-                        });
-    $routeProvider.when('/chart',
-                        {
-                            templateUrl: 'Chart/Index',
-                            controller: 'ChartController'
-                        });
     $routeProvider.otherwise(
                         {
                             redirectTo: '/'
