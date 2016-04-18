@@ -39,7 +39,7 @@ namespace CSPA.Controllers.API
                                  Id = activity.Id,
                                  Name = activity.Name,
                                  ActivityType = activity.Type.ToString(),
-                                 DateTime = activity.DateTimeStartLocal,
+                                 DateTime = activity.DateTimeStart,
                                  ElapseTimeSeconds = activity.ElapsedTime,
                                  Distance = (float)(Math.Round(activity.Distance / 1000, 3))
                              };
@@ -56,7 +56,7 @@ namespace CSPA.Controllers.API
                 Id = activity.Id,
                 Name = activity.Name,
                 ActivityType = activity.Type.ToString(),
-                DateTime = activity.DateTimeStartLocal,
+                DateTime = activity.DateTimeStart,
                 ElapseTimeSeconds = activity.ElapsedTime,
                 Distance = (float)(Math.Round(activity.Distance / 1000, 3)),
                 AverageSpeed = (float)(Math.Round(activity.AverageSpeed * 3.6, 3)),
