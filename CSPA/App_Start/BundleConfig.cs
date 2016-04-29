@@ -16,6 +16,9 @@ namespace CSPA
                 "~/Scripts/app/RiderController.js",
                 "~/Scripts/app/ActivityController.js",
                 "~/Scripts/app/ActivityDetailController.js",
+                "~/Scripts/app/EarnDateController.js",
+                "~/Scripts/app/ChartController.js",
+                "~/Scripts/app/SkillController.js",
                 "~/Scripts/app/Service.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
@@ -30,6 +33,21 @@ namespace CSPA
             //bundles.Add(new StyleBundle("~/Content/css").Include(
             //     "~/Content/bootstrap.css",
             //     "~/Content/Site.css"));
+
+            //bundles.Add(new ScriptBundle("~/bundles/radar").Include(
+            //    "~/Scripts/radar/require.js",
+            //    "~/Scripts/radar/render.js", 
+            //    "~/Scripts/radar/d3.min.js",
+            //    "~/Scripts/radar/text.js",
+            //    "~/Scripts/radar/jquery.tooltipster.min.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/radar").Include(                
+                "~/Scripts/radar/radar.js",
+                "~/Scripts/radar/d3.min.js"
+                ));
+
+            bundles.Add(new StyleBundle("~/Content/radar").Include(
+                 "~/Scripts/radar/main.css"));
         }
     }
 }

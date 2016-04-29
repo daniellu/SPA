@@ -228,6 +228,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MeController.cs" />
     <Compile Include="Controllers\RiderController.cs" />
+    <Compile Include="Controllers\SkillController.cs" />
     <Compile Include="DependencyInjection\DependencyConfigure.cs" />
     <Compile Include="DependencyInjection\ApplicationDependencyResolver.cs" />
     <Compile Include="DependencyInjection\StravaClientHelper.cs" />
@@ -262,6 +263,7 @@
     <Content Include="Scripts\app\ActivityController.js" />
     <Content Include="Scripts\app\RiderController.js" />
     <Content Include="Scripts\app\Service.js" />
+    <Content Include="Scripts\app\SkillController.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -294,6 +296,16 @@
     <Content Include="Scripts\md\js\ripples.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\ng-map.min.js" />
+    <Content Include="Scripts\radar\d3.min.js" />
+    <Content Include="Scripts\radar\jquery-2.1.3.js" />
+    <Content Include="Scripts\radar\jquery.tooltipster.min.js" />
+    <Content Include="Scripts\radar\json.js" />
+    <Content Include="Scripts\radar\lettuce.js" />
+    <Content Include="Scripts\radar\main.css" />
+    <Content Include="Scripts\radar\main.js" />
+    <Content Include="Scripts\radar\render.js" />
+    <Content Include="Scripts\radar\require.js" />
+    <Content Include="Scripts\radar\text.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
@@ -356,6 +368,7 @@
     <Content Include="Scripts\md\js\material.min.js.map" />
     <Content Include="Scripts\md\js\ripples.min.js.map" />
     <Content Include="Views\Home\DashBoard.cshtml" />
+    <Content Include="Views\Skill\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

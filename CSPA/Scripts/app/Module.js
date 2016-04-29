@@ -27,6 +27,11 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider) {
                             templateUrl: 'Activity/Detail',
                             controller: 'ActivityDetailController'
                         });
+    $routeProvider.when('/skill',
+                        {
+                            templateUrl: 'Skill/Index',
+                            controller: 'SkillController'
+                        });
     $routeProvider.otherwise(
                         {
                             redirectTo: '/'
