@@ -212,13 +212,13 @@ function radar(id, data) {
         .text(function(d) { return d.name; });
 
     // add the lists
-    var ul = d3.select(id).append('ul');
-    ul.selectAll('li.quadrant')
-      .data(blip_data)
-      .enter()
-      .append('li')
-      .attr('class','quadrant')
-      .text(function(d) { return d.name; });
+    //var ul = d3.select(id).append('ul');
+    //ul.selectAll('li.quadrant')
+    //  .data(blip_data)
+    //  .enter()
+    //  .append('li')
+    //  .attr('class','quadrant')
+    //  .text(function(d) { return d.name; });
     
   }  
   draw_radar();

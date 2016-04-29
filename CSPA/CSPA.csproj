@@ -303,6 +303,7 @@
     <Content Include="Scripts\radar\lettuce.js" />
     <Content Include="Scripts\radar\main.css" />
     <Content Include="Scripts\radar\main.js" />
+    <Content Include="Scripts\radar\radar.js" />
     <Content Include="Scripts\radar\render.js" />
     <Content Include="Scripts\radar\require.js" />
     <Content Include="Scripts\radar\text.js" />
