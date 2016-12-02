@@ -1,2 +1,2 @@
 # SPA
-SPN is a angular study project
+SPA is a study project
