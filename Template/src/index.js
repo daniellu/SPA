@@ -1,3 +1,4 @@
+require('./assets/css/default.css');//import the global css file
 
 import Vue from 'vue'
 import Links from './components/Links.vue'
