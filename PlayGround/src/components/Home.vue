@@ -1,28 +1,37 @@
  <!-- src/components/Home.vue -->
 
   <template>
-    <div class="col-sm-6 col-sm-offset-3">
-      <img src=".././assets/logo.png">      
-      <h1>Get a Free Chuck Norris Quote!</h1>
-      <button class="btn btn-primary" v-on:click="getQuote()">Get a Quote</button>
-      <div class="quote-area" v-if="quote">
-        <h2><blockquote>{{ quote }}</blockquote></h2>      
+    <div>      
+      <div class="row">
+         <div class="form-group">
+            <label for="queryArea">Query</label>            
+            <textarea class="form-control" id="queryArea" v-model="queryString"></textarea>
+          </div>  
       </div>
+      <div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            Basic panel example
+          </div>
+        </div>
+      </div>
+      <div class="row" id="graphDiv"></div>
     </div>
+    
   </template>
 
   <script>
   export default {
     data() {
       return {
-        quote: 'This is the default quote value'
+        queryString: 'This is the default quote value'
       }
     },
     methods: {
       getQuote() {
         this.$http
           .get('http://localhost:3001/api/random-quote', (data) => {
-            this.quote = data;
+            this.queryString = data;
           })
           .error((err) => console.log(err))
       }
